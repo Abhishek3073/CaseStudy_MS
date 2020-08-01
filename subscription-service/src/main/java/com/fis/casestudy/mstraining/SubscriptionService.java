@@ -6,12 +6,18 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class SubscriptionService {
+	Logger logger = LoggerFactory.getLogger(SubscriptionService.class.getName());
 	
 	@Autowired
 	private BookServiceProxy proxy;
@@ -25,6 +31,7 @@ public class SubscriptionService {
 	}
 	
 	@Transactional
+	@HystrixCommand(fallbackMethod="fallbackForSubscription")
 	public Subscription subscription(@RequestParam String bookname, @RequestParam String author, @RequestParam String subscribername) {
 		List<Book> response = proxy.retrieveBooks();
 		Subscription savedSubscription = null;
@@ -55,6 +62,7 @@ public class SubscriptionService {
 	}
 	
 	@Transactional
+	@HystrixCommand(fallbackMethod="fallbackForUnsubscription")
 	public Subscription unsubscription(@RequestParam String bookname, @RequestParam String author, @RequestParam String subscribername) {
 		List<Book> booksResponse = proxy.retrieveBooks();
 		Subscription updatedSubscription = null;
@@ -80,5 +88,15 @@ public class SubscriptionService {
 		}
 		 
 		return updatedSubscription;
+	}
+	
+	public Subscription fallbackForSubscription(@PathVariable String bookname, @PathVariable String author, @PathVariable String subscribername) {
+		logger.debug("Book is not available this time, please check later");
+		return new Subscription(0L, subscribername, null, null, "Book is not available this time, please check later");
+    }
+	
+	public Subscription fallbackForUnsubscription(@PathVariable String bookname, @PathVariable String author, @PathVariable String subscribername) {
+		logger.debug("Either this user is not associated with this book or already unscribed");
+		return new Subscription(0L, subscribername, null, null, "Either this user is not associated with this book or already unscribed");
 	}
 }
