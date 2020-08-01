@@ -1,0 +1,153 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CaseStudy",
+		"_postman_id": "3648eeee-9f48-fd61-6017-ca3ddc9d21b2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetBooks",
+			"request": {
+				"url": "http://localhost:8001/books",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SubscribeBook",
+			"request": {
+				"url": "http://localhost:8001/book-service/subscribebook",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookname",
+							"value": "History of Amazon Valley",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Ross Suarez",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UnsubscribeBook",
+			"request": {
+				"url": "http://localhost:8001/book-service/unsubscribebook",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookname",
+							"value": "History of Amazon Valley",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Ross Suarez",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetSubscriptions",
+			"request": {
+				"url": "http://localhost:8100/subscriptions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe",
+			"request": {
+				"url": "http://localhost:8100/subscription",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookname",
+							"value": "History of Amazon Valley",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Ross Suarez",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "subscribername",
+							"value": "Suresh",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UnSubscribe",
+			"request": {
+				"url": "http://localhost:8100/subscription-update",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bookname",
+							"value": "History of Amazon Valley",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "Ross Suarez",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "subscribername",
+							"value": "Suresh",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
