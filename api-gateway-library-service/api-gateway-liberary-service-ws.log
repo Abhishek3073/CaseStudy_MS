@@ -1,0 +1,75 @@
+2020-07-31 16:48:48.024  INFO 18420 --- [restartedMain] c.m.ApiGatewayLiberaryServiceApplication : No active profile set, falling back to default profiles: default
+2020-07-31 16:48:48.742  WARN 18420 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-31 16:48:48.755  WARN 18420 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2020-07-31 16:48:48.875  INFO 18420 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9f6e2e07-36e1-351b-ab45-26f2e378e435
+2020-07-31 16:48:49.542  INFO 18420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8765 (http)
+2020-07-31 16:48:49.548  INFO 18420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-31 16:48:49.549  INFO 18420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-07-31 16:48:49.704  INFO 18420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-31 16:48:49.705  INFO 18420 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
+2020-07-31 16:48:49.875  WARN 18420 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-31 16:48:49.875  INFO 18420 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-31 16:48:49.883  INFO 18420 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4226f0ba
+2020-07-31 16:48:50.739  WARN 18420 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-31 16:48:50.739  INFO 18420 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-31 16:48:50.893  INFO 18420 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-31 16:48:51.985  WARN 18420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-07-31 16:48:52.010  WARN 18420 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-31 16:48:52.756  INFO 18420 --- [restartedMain] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2020-07-31 16:48:52.774  INFO 18420 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-31 16:48:52.855  INFO 18420 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-31 16:48:52.885  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-31 16:48:52.941  INFO 18420 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-31 16:48:52.941  INFO 18420 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-31 16:48:53.080  INFO 18420 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-31 16:48:53.081  INFO 18420 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-31 16:48:53.087  INFO 18420 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-31 16:48:53.088  INFO 18420 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-31 16:48:53.096  INFO 18420 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-31 16:48:53.338  INFO 18420 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-31 16:48:53.756  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-31 16:48:53.757  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-31 16:48:53.757  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-31 16:48:53.757  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-31 16:48:53.757  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-31 16:48:53.757  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-31 16:48:53.758  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-31 16:48:53.866  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-31 16:48:53.869  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-07-31 16:48:53.872  INFO 18420 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-31 16:48:53.876  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1596194333875 with initial instances count: 1
+2020-07-31 16:48:53.879  INFO 18420 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY-LIBERARY-SERVICE with eureka with status UP
+2020-07-31 16:48:53.879  INFO 18420 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1596194333879, current=UP, previous=STARTING]
+2020-07-31 16:48:53.882  INFO 18420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY-LIBERARY-SERVICE/DEL2-LTBRXQQN2.FNFIS.com:api-gateway-liberary-service:8765: registering service...
+2020-07-31 16:48:53.913  INFO 18420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8765 (http) with context path ''
+2020-07-31 16:48:53.915  INFO 18420 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8765
+2020-07-31 16:48:53.916  INFO 18420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY-LIBERARY-SERVICE/DEL2-LTBRXQQN2.FNFIS.com:api-gateway-liberary-service:8765 - registration status: 204
+2020-07-31 16:48:54.619  INFO 18420 --- [restartedMain] c.m.ApiGatewayLiberaryServiceApplication : Started ApiGatewayLiberaryServiceApplication in 8.48 seconds (JVM running for 9.783)
+2020-07-31 16:51:49.298  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-07-31 16:51:49.299  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY-LIBERARY-SERVICE with eureka with status DOWN
+2020-07-31 16:51:49.300  WARN 18420 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1596194509300, current=DOWN, previous=UP]
+2020-07-31 16:51:49.300  INFO 18420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY-LIBERARY-SERVICE/DEL2-LTBRXQQN2.FNFIS.com:api-gateway-liberary-service:8765: registering service...
+2020-07-31 16:51:49.726  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-31 16:51:49.727  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-07-31 16:51:49.733  WARN 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [spring.cloud.inetutils] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source)
+ java.util.concurrent.LinkedBlockingQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-07-31 16:51:49.733  WARN 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [RxIoScheduler-1 (Evictor)] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+ java.lang.Thread.run(Unknown Source)
+2020-07-31 16:51:49.741  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2020-07-31 16:51:49.746  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-31 16:51:49.756  INFO 18420 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
