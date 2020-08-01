@@ -6,7 +6,10 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class BookService {
@@ -19,6 +22,7 @@ public class BookService {
 	}
 	
 	@Transactional
+	@HystrixCommand(fallbackMethod="fallbackForSubscribeBook")
 	public String subscribebook(@RequestParam String bookname, @RequestParam String author) {
 		List<Book> bookList = bookRepository.findAll();
 		
@@ -38,6 +42,7 @@ public class BookService {
 	}
 	
 	@Transactional
+	@HystrixCommand(fallbackMethod="fallbackForUnSubscribeBook")
 	public String unsubscribebook(@RequestParam String bookname, @RequestParam String author) {
 		List<Book> bookList = bookRepository.findAll();
 		
@@ -55,4 +60,12 @@ public class BookService {
 		
 		return "Book UnSubscribed Successfully";
 	}
+	
+	public String fallbackForSubscribeBook(@PathVariable String bookname, @PathVariable String author) {
+        return "Book = " + bookname + ", written by author = " + author + " is not available right now, please check later";
+    }
+	
+	public String fallbackForUnSubscribeBook(@PathVariable String bookname, @PathVariable String author) {
+        return "Book = " + bookname + ", written by author = " + author + " is already unscriberd by all subscribers";
+    }
 }
